@@ -1,9 +1,11 @@
-package oop;
-import java.util.Scanner;
+package controller;
+
+import user.*;
+import bmi.*;
 
 public class CalculatorController {
-	int execute(CalculatorDTO param) {
-		CalculatorService service = new CalculatorService();
+	public int execute(CalculatorDTO param) {
+		CalculatorService service = new CalculatorServiceImpl();
 		int res = 0;
 		String op = param.getOpcode();
 		if(op.equals("+")) {
@@ -19,5 +21,4 @@ public class CalculatorController {
 		}
 		return res;
 	}
-	
 }
